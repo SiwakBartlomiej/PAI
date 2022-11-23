@@ -1,0 +1,23 @@
+<h2>Szczegóły oferty <?= $oferta["numer"] ?>:</h2>
+<br>
+
+<strong>Typ oferty:     </strong><?php switch($oferta["typ_oferty"]): 
+    case "S": ?>Sprzedaż<?php break; ?>
+    <?php case "W": ?>
+        Wynajem
+    <?php break; ?>
+    <?php endswitch; ?>
+<br>
+<strong>Typ nieruchomości:     </strong><?php switch($oferta["typ_nieruchomosci"]): 
+    case "M": ?>Mieszkanie<?php break; ?>
+    <?php case "D": ?>
+        Dom
+    <?php break; ?>
+    <?php case "G": ?>
+        Grunt
+    <?php break; ?>
+    <?php endswitch; ?>
+<br>
+<strong>Powierzchnia: </strong><?= $oferta["powierzchnia"] ?>m²<br>
+<strong>Cena: </strong><?= $oferta["cena"] ?>zł<br>
+
